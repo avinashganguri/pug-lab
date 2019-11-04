@@ -23,7 +23,7 @@ app.post('/saveCookies', function(req, res){
 app.post('/displayDetails', function (req,res) {
    res.render('display_Details',{loginCookie: req.cookies.loginCookie});
 });
-
-app.listen(3000, function(){
-   console.log("Listening to port 3000")
+var port = process.env.PORT || 8080;
+app.listen(port, function(){
+   console.log("Listening to port 8080")
 });
